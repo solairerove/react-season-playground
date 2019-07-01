@@ -9,8 +9,16 @@ const App = () => {
 
   let content;
   if (errorMessage) {
-    return <div>Error: {errorMessage}</div>;
-  } else if (lat) {
+    return (
+      <div>
+        <p />
+Error:
+        {errorMessage}
+        <p />
+      </div>
+    );
+  }
+  if (lat) {
     content = <SeasonDisplay lat={lat} />;
   } else {
     content = <Loader message="Please accept location request" />;
